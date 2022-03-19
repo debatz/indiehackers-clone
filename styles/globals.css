@@ -4,6 +4,6 @@
 
 @layer base {
     html {
-        @apply font-SourceSans;
+        @apply font-SourceSans bg-[#0e2439];
     }
   }
