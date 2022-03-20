@@ -1,10 +1,9 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
 import HeaderTitle from '@/atoms/HeaderTitle';
-import HeaderButton from '@/atoms/HeaderButton';
 export default function FilterNav({ props, router }) {
   return (
-    <nav className="flex justify-between">
+    <nav>
       <ul className="flex space-x-3">
         {props.map((i, index) => {
           return (
@@ -22,7 +21,6 @@ export default function FilterNav({ props, router }) {
           );
         })}
       </ul>
-      <HeaderButton />
     </nav>
   );
 }
