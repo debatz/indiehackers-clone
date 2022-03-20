@@ -8,8 +8,10 @@ export default function PostCard({
   title,
   collection,
   collectionName,
+  collectionBadge,
   upvotes,
   comments,
+  authorBadge
 }) {
   return (
     <div
@@ -19,12 +21,13 @@ export default function PostCard({
         <PostTitle>{title}</PostTitle>
         <PostInfo
           collection={collection}
+          collectionBadge={collectionBadge}
           collectionName={collectionName}
           upvotes={upvotes}
           comments={comments}
         />
       </div>
-      <AuthorBadge />
+      <AuthorBadge authorBadge={authorBadge} />
     </div>
   );
 }

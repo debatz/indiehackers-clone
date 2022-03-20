@@ -1,25 +1,20 @@
 import { HeroIcon } from "@/components/atoms/HeroIcon";
 import InfoText from "@/components/atoms/PostLoop/InfoText";
 
-export default function PostInfo({ collection, collectionName, upvotes, comments }) {
+export default function PostInfo({
+  collection,
+  collectionName,
+  collectionBadge,
+  upvotes,
+  comments,
+}) {
   return (
     <div className="flex space-x-3">
       <div className="flex items-center space-x-0.5">
         <picture>
-          <source
-            srcSet="https://storage.googleapis.com/indie-hackers.appspot.com/group-icons/no-code/28x28_no-code.webp?ts=1"
-            type="image/webp"
-          />
-          <source
-            srcSet="https://storage.googleapis.com/indie-hackers.appspot.com/group-icons/no-code/no-code"
-            type="image/png"
-          />
-          <source
-            srcSet="https://storage.googleapis.com/indie-hackers.appspot.com/group-icons/no-code/no-code"
-            type="image/jpeg"
-          />
+          <source srcSet={collectionBadge} type="image/webp" />
           <img
-            className="w-4 h-4"
+            className="w-4 h-4 rounded-full"
             src="/nonexistent-image.png"
             alt="Collection Image"
           />
