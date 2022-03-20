@@ -1,4 +1,4 @@
-import { HeroIcon } from "../atoms/HeroIcon";
+import { HeroIcon } from "@/atoms/HeroIcon";
 
 export default function MobileTitleBarActions() {
   return (
