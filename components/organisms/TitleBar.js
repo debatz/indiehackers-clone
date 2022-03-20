@@ -1,6 +1,6 @@
 import MobileTitleBarActions from "../molecules/MobileTitleBarActions";
 import TitleBarLabel from "../atoms/TitleBarLabel";
-import TitleBarLinks from "../molecules/TitleBarLinks";
+import TitleBarLink from "../atoms/TitleBarLink";
 
 export default function TitleBar() {
   return (
@@ -9,10 +9,10 @@ export default function TitleBar() {
       <MobileTitleBarActions />
       {/* Mobile: Logo + Burger Menu + Search  */}
       <div>
-        <TitleBarLinks>
+        <TitleBarLink>
           <TitleBarLabel>Log In</TitleBarLabel>
           <TitleBarLabel>Sign Up</TitleBarLabel>
-        </TitleBarLinks>
+        </TitleBarLink>
       </div>
     </nav>
   );
