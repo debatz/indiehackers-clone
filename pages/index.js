@@ -12,6 +12,24 @@ import PostCard from "@/components/organisms/PostLoop/PostCard";
 import TimeFilters from "@/components/molecules/PostLoop/TimeFilters";
 
 export default function Home() {
+  const posts = [
+    {
+      title: "Where do you hang out online?",
+      author: "Tim",
+      collection: true,
+      collectionName: "No-Code",
+      upvotes: 7,
+      comments: 13,
+    },
+    {
+      title: "Where do you hang out online?",
+      author: "Tim",
+      collection: true,
+      collectionName: "No-Code",
+      upvotes: 7,
+      comments: 13,
+    },
+  ];
   return (
     <div>
       <Head>
@@ -30,8 +48,20 @@ export default function Home() {
 
         <TimeFilters />
         <Border className="my-3" />
-
-        <PostCard />
+        {posts.map((i, index) => {
+          return (
+            <div key={index}>
+              <PostCard
+                title={i.title}
+                collection={i.collection}
+                collectionName={i.collectionName}
+                upvotes={i.upvotes}
+                comments={i.comments}
+              />
+              <Border className="my-3" />
+            </div>
+          );
+        })}
       </section>
     </div>
   );
