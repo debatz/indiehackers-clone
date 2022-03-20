@@ -16,18 +16,22 @@ export default function Home() {
     {
       title: "Where do you hang out online?",
       author: "Tim",
+      authorBadge: "https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_jOi6X6JsNPQgVBZjk6Qb2fQIPDu1.webp",
       collection: true,
       collectionName: "No-Code",
+      collectionBadge: "https://storage.googleapis.com/indie-hackers.appspot.com/group-icons/no-code/28x28_no-code.webp",
       upvotes: 7,
       comments: 13,
     },
     {
-      title: "Where do you hang out online?",
-      author: "Tim",
+      title: "Household name superstar just endorsed my product in a magazine interview",
+      author: "Tom",
+      authorBadge: "https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_YdZoKFYO86bTRp45KkUBY0pUaCB3.webp",
       collection: true,
-      collectionName: "No-Code",
-      upvotes: 7,
-      comments: 13,
+      collectionName: "Lessons Learned",
+      collectionBadge: "https://storage.googleapis.com/indie-hackers.appspot.com/group-icons/lessons-learned/28x28_lessons-learned.webp",
+      upvotes: 8,
+      comments: 7,
     },
   ];
   return (
@@ -55,8 +59,10 @@ export default function Home() {
                 title={i.title}
                 collection={i.collection}
                 collectionName={i.collectionName}
+                collectionBadge={i.collectionBadge}
                 upvotes={i.upvotes}
                 comments={i.comments}
+                authorBadge={i.authorBadge}
               />
               <Border className="my-3" />
             </div>
