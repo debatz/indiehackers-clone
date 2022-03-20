@@ -11,13 +11,13 @@ export default function PostCard({
   collectionBadge,
   upvotes,
   comments,
-  authorBadge
+  authorBadge,
 }) {
   return (
     <div
       className={twClass("flex justify-between", className && `${className}`)}
     >
-      <div className="space-y-1">
+      <div className="space-y-2">
         <PostTitle>{title}</PostTitle>
         <PostInfo
           collection={collection}

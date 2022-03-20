@@ -23,12 +23,18 @@ export default function PostInfo({
       </div>
 
       <div className="flex items-center space-x-1">
-        <HeroIcon icon="ChevronUpIcon" className="w-5 text-[#9cb3c9] opacity-50" />
+        <HeroIcon
+          icon="ChevronUpIcon"
+          className="w-5 text-[#9cb3c9] opacity-50"
+        />
         <InfoText>{upvotes}</InfoText>
       </div>
 
       <div className="flex items-center space-x-1">
-        <HeroIcon icon="ChatIcon" className="h-4 w-4 text-[#9cb3c9] opacity-50" />
+        <HeroIcon
+          icon="ChatIcon"
+          className="h-4 w-4 text-[#9cb3c9] opacity-50"
+        />
         <InfoText>{comments}</InfoText>
       </div>
     </div>
