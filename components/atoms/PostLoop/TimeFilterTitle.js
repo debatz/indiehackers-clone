@@ -1,7 +1,6 @@
 import { twClass } from "utils/twClass";
 
 export default function TimeFilterTitle({ children, isActive }) {
-  console.log(isActive);
   return (
     <span
       className={twClass(

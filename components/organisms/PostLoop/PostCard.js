@@ -1,13 +1,28 @@
 import PostTitle from "@/components/atoms/PostLoop/PostTitle";
 import PostInfo from "@/components/molecules/PostLoop/PostInfo";
 import AuthorBadge from "@/components/atoms/PostLoop/AuthorBadge";
+import { twClass } from "utils/twClass";
 
-export default function PostCard() {
+export default function PostCard({
+  className,
+  title,
+  collection,
+  collectionName,
+  upvotes,
+  comments,
+}) {
   return (
-    <div className="flex justify-between">
+    <div
+      className={twClass("flex justify-between", className && `${className}`)}
+    >
       <div className="space-y-1">
-        <PostTitle>Where do you hang out online?</PostTitle>
-        <PostInfo />
+        <PostTitle>{title}</PostTitle>
+        <PostInfo
+          collection={collection}
+          collectionName={collectionName}
+          upvotes={upvotes}
+          comments={comments}
+        />
       </div>
       <AuthorBadge />
     </div>
