@@ -1,7 +1,15 @@
 import Head from "next/head";
 import Image from "next/image";
-import Container from "../components/Container";
-import TitleBar from '../components/organisms/TitleBar';
+import Container from "@/components/Container";
+import TitleBar from "@/components/organisms/TitleBar";
+import Header from "@/components/organisms/Header";
+import Border from "@/components/atoms/Border";
+import { HeroIcon } from "@/components/atoms/HeroIcon";
+import PostTitle from "@/components/atoms/PostLoop/PostTitle";
+import PostInfo from "@/components/molecules/PostLoop/PostInfo";
+import AuthorBadge from "@/components/atoms/PostLoop/AuthorBadge";
+import PostCard from "@/components/organisms/PostLoop/PostCard";
+import TimeFilters from "@/components/molecules/PostLoop/TimeFilters";
 
 export default function Home() {
   return (
@@ -12,11 +20,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <TitleBar />
-      <main>
-        <section>test</section>
-      </main>
+      <main></main>
 
-      <footer></footer>
+      <section className="mx-4">
+        <div className="mt-9">
+          <Header />
+        </div>
+        <Border className="my-3" />
+
+        <TimeFilters />
+        <Border className="my-3" />
+
+        <PostCard />
+      </section>
     </div>
   );
 }
