@@ -11,13 +11,14 @@ export default function TimeFilters() {
     { title: "MONTHLY", href: "/monthly" },
     { title: "ALL-TIME", href: "/all-time" },
   ];
+
   return (
     <nav>
       <ul className="flex space-x-3">
         {props.map((i, index) => {
           return (
             <li key={index}>
-              <Link href={i.href} passHref value="test">
+              <Link href={i.href} passHref>
                 <a>
                   <TimeFilterTitle
                     isActive={router.pathname == i.href ? true : false}

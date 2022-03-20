@@ -1,11 +1,13 @@
 import { twClass } from "utils/twClass";
 
 export default function TimeFilterTitle({ children, isActive }) {
+  console.log(isActive);
   return (
     <span
       className={twClass(
-        "text-sm font-semibold text-[#b6cce2] uppercase",
-        isActive && "text-white"
+        "text-sm font-semibold uppercase",
+        isActive && "text-white",
+        !isActive && "text-[#b6cce2]"
       )}
     >
       {children}

@@ -8,7 +8,7 @@ export default function FilterNav({ props, router }) {
         {props.map((i, index) => {
           return (
             <li key={index}>
-              <Link href={i.href} passHref value="test">
+              <Link href={i.href} passHref>
                 <a>
                   <HeaderTitle
                     isActive={router.pathname == i.href ? true : false}
