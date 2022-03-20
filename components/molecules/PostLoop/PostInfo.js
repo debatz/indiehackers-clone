@@ -10,7 +10,7 @@ export default function PostInfo({
 }) {
   return (
     <div className="flex space-x-3">
-      <div className="flex items-center space-x-0.5">
+      <div className="flex items-center space-x-1">
         <picture>
           <source srcSet={collectionBadge} type="image/webp" />
           <img
@@ -23,12 +23,12 @@ export default function PostInfo({
       </div>
 
       <div className="flex items-center space-x-1">
-        <HeroIcon icon="ChevronUpIcon" className="w-5 text-[#9cb3c9]" />
+        <HeroIcon icon="ChevronUpIcon" className="w-5 text-[#9cb3c9] opacity-50" />
         <InfoText>{upvotes}</InfoText>
       </div>
 
       <div className="flex items-center space-x-1">
-        <HeroIcon icon="ChatIcon" className="h-4 w-4 text-[#9cb3c9]" />
+        <HeroIcon icon="ChatIcon" className="h-4 w-4 text-[#9cb3c9] opacity-50" />
         <InfoText>{comments}</InfoText>
       </div>
     </div>
