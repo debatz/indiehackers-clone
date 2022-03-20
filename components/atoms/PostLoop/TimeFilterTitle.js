@@ -6,7 +6,7 @@ export default function TimeFilterTitle({ children, isActive }) {
       className={twClass(
         "text-sm font-semibold uppercase",
         isActive && "text-white",
-        !isActive && "text-[#b6cce2]"
+        !isActive && "text-[#b6cce2] opacity-50"
       )}
     >
       {children}
