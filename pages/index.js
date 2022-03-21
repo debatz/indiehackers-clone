@@ -10,6 +10,16 @@ import PostInfo from "@/components/molecules/PostLoop/PostInfo";
 import AuthorBadge from "@/components/atoms/PostLoop/AuthorBadge";
 import PostCard from "@/components/organisms/PostLoop/PostCard";
 import TimeFilters from "@/components/molecules/PostLoop/TimeFilters";
+import PaginationTitle from "@/components/atoms/PostLoop/PaginationTitle";
+import PostLoop from "@/components/organisms/PostLoop/PostLoop";
+import SectionTitle from "@/components/atoms/RemoteJobs/SectionTitle";
+import JobTitle from "@/components/atoms/RemoteJobs/JobTitle";
+import JobInfoSpan from "@/components/atoms/RemoteJobs/JobInfoSpan";
+import JobInfo from "@/components/molecules/RemoteJobs/JobInfo";
+import JobCard from "@/components/organisms/RemoteJobs/JobCard";
+import JobLoop from "@/components/organisms/RemoteJobs/JobLoop";
+import EntryCard from '@/components/molecules/PartnerUp/EntryCard';
+import PartnerUpLoop from '@/components/organisms/PartnerUp/PartnerUpLoop';
 
 export default function Home() {
   const posts = [
@@ -39,6 +49,45 @@ export default function Home() {
       comments: 7,
     },
   ];
+
+  const jobInfo = [
+    {
+      title: "Frontend Engineer (Web&Mobile)",
+      company: "Chimpy",
+      jobBadge:
+        "https://storage.googleapis.com/indie-hackers.appspot.com/product-avatars/chimpy/52x52_chimpy.webp?1647890542403",
+      minSalary: "80,000",
+      maxSalary: "110,000",
+      currency: "$",
+      type: "Full Time",
+      datePosted: "2022-03-19T23:28:56.782Z"
+    },
+    {
+      title: "Frontend Engineer (Web&Mobile)",
+      company: "Chimpy",
+      jobBadge:
+        "https://storage.googleapis.com/indie-hackers.appspot.com/product-avatars/chimpy/52x52_chimpy.webp?1647890542403",
+      minSalary: "80,000",
+      maxSalary: "110,000",
+      currency: "$",
+      type: "Full Time",
+      datePosted: "2022-03-19T23:28:56.782Z"
+    },
+  ];
+
+  const partnerInfo = [
+    {
+      title: "Software Developer Looking For Email Marketer",
+      datePosted: "2022-03-19T23:28:56.782Z",
+      icon: "StarIcon"
+    },
+    {
+      title: "Looking for a full-stack dev co-founder for a SaaS startup",
+      datePosted: "2022-03-19T23:28:56.782Z",
+      icon: "CodeIcon"
+    },
+  ];
+
   return (
     <div>
       <Head>
@@ -57,23 +106,15 @@ export default function Home() {
 
         <TimeFilters />
         <Border className="my-3" />
-        {posts.map((i, index) => {
-          return (
-            <div key={index}>
-              <PostCard
-                title={i.title}
-                collection={i.collection}
-                collectionName={i.collectionName}
-                collectionBadge={i.collectionBadge}
-                upvotes={i.upvotes}
-                comments={i.comments}
-                authorBadge={i.authorBadge}
-              />
-              <Border className="my-3" />
-            </div>
-          );
-        })}
+        <PostLoop props={posts} />
       </section>
+      <section className="mx-4 mt-9">
+        <JobLoop props={jobInfo} />
+      </section>
+      <section className="mx-4 mt-9">
+        <PartnerUpLoop props={partnerInfo} />
+      </section>
+      
     </div>
   );
 }
