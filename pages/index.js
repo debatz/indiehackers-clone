@@ -1,25 +1,15 @@
+import { useRouter } from "next/router";
+
 import Head from "next/head";
-import Image from "next/image";
-import Container from "@/components/Container";
 import TitleBar from "@/components/organisms/TitleBar";
 import Header from "@/components/organisms/Header";
 import Border from "@/components/atoms/Border";
-import { HeroIcon } from "@/components/atoms/HeroIcon";
-import PostTitle from "@/components/atoms/PostLoop/PostTitle";
-import PostInfo from "@/components/molecules/PostLoop/PostInfo";
-import AuthorBadge from "@/components/atoms/PostLoop/AuthorBadge";
-import PostCard from "@/components/organisms/PostLoop/PostCard";
 import TimeFilters from "@/components/molecules/PostLoop/TimeFilters";
-import PaginationTitle from "@/components/atoms/PostLoop/PaginationTitle";
 import PostLoop from "@/components/organisms/PostLoop/PostLoop";
-import SectionTitle from "@/components/atoms/RemoteJobs/SectionTitle";
-import JobTitle from "@/components/atoms/RemoteJobs/JobTitle";
-import JobInfoSpan from "@/components/atoms/RemoteJobs/JobInfoSpan";
-import JobInfo from "@/components/molecules/RemoteJobs/JobInfo";
-import JobCard from "@/components/organisms/RemoteJobs/JobCard";
 import JobLoop from "@/components/organisms/RemoteJobs/JobLoop";
-import EntryCard from '@/components/molecules/PartnerUp/EntryCard';
-import PartnerUpLoop from '@/components/organisms/PartnerUp/PartnerUpLoop';
+import PartnerUpLoop from "@/components/organisms/PartnerUp/PartnerUpLoop";
+import MeetupsLoop from "@/components/organisms/Meetups/MeetupsLoop";
+import Footer from "@/components/organisms/Footer/Footer";
 
 export default function Home() {
   const posts = [
@@ -60,7 +50,7 @@ export default function Home() {
       maxSalary: "110,000",
       currency: "$",
       type: "Full Time",
-      datePosted: "2022-03-19T23:28:56.782Z"
+      datePosted: "2022-03-19T23:28:56.782Z",
     },
     {
       title: "Frontend Engineer (Web&Mobile)",
@@ -71,7 +61,7 @@ export default function Home() {
       maxSalary: "110,000",
       currency: "$",
       type: "Full Time",
-      datePosted: "2022-03-19T23:28:56.782Z"
+      datePosted: "2022-03-19T23:28:56.782Z",
     },
   ];
 
@@ -79,15 +69,137 @@ export default function Home() {
     {
       title: "Software Developer Looking For Email Marketer",
       datePosted: "2022-03-19T23:28:56.782Z",
-      icon: "StarIcon"
+      icon: "StarIcon",
     },
     {
       title: "Looking for a full-stack dev co-founder for a SaaS startup",
       datePosted: "2022-03-19T23:28:56.782Z",
-      icon: "CodeIcon"
+      icon: "CodeIcon",
     },
   ];
 
+  const meetupInfo = [
+    {
+      title: "IndieBeers // London Meetup #25",
+      location: "London, United Kingdom",
+    },
+    {
+      title:
+        "Q&A with Kristin Zhivago: How to put yourself in your customers shoes",
+      location: "Remote",
+    },
+    {
+      title:
+        "Q&A with Kristin Zhivago: How to put yourself in your customers shoes",
+      location: "Remote",
+    },
+    {
+      title:
+        "Q&A with Kristin Zhivago: How to put yourself in your customers shoes",
+      location: "Remote",
+    },
+    {
+      title:
+        "Q&A with Kristin Zhivago: How to put yourself in your customers shoes",
+      location: "Remote",
+    },
+  ];
+
+  const footerColumns = [
+    {
+      title: "Community",
+      links: [
+        {
+          title: "Groups",
+          href: "/",
+          icon: "",
+        },
+        {
+          title: "Meetups",
+          href: "/",
+          icon: "",
+        },
+        {
+          title: "Top Today",
+          href: "/",
+          icon: "",
+        },
+        {
+          title: "Top This Week",
+          href: "/",
+          icon: "",
+        },
+        {
+          title: "Top This Month",
+          href: "/",
+          icon: "",
+        },
+        {
+          title: "Join",
+          href: "/",
+          icon: "ArrowRightIcon",
+        },
+      ],
+    },
+    {
+      title: "Products",
+      links: [
+        {
+          title: "All Products",
+          href: "/",
+          icon: "",
+        },
+        {
+          title: "Highest Revenue",
+          href: "/",
+          icon: "",
+        },
+        {
+          title: "Side Projects",
+          href: "/",
+          icon: "",
+        },
+        {
+          title: "Self-Funded",
+          href: "/",
+          icon: "",
+        },
+        {
+          title: "Add Yours",
+          href: "/",
+          icon: "ArrowRightIcon",
+        },
+      ],
+    },
+    {
+      title: "Learn",
+      links: [
+        {
+          title: "Explore",
+          href: "/",
+          icon: "",
+        },
+        {
+          title: "Starte Here",
+          href: "/",
+          icon: "",
+        },
+        {
+          title: "Podcasts",
+          href: "/",
+          icon: "",
+        },
+
+        {
+          title: "Contribute",
+          href: "/",
+          icon: "ArrowRightIcon",
+        },
+      ],
+    },
+  ];
+  
+  const router = useRouter();
   return (
     <div>
       <Head>
@@ -114,7 +226,12 @@ export default function Home() {
       <section className="mx-4 mt-9">
         <PartnerUpLoop props={partnerInfo} />
       </section>
-      
+      <section className="mx-4 mt-9">
+        <MeetupsLoop props={meetupInfo} />
+      </section>
+      <footer className="">
+        <Footer props={footerColumns} router={router}></Footer>
+      </footer>
     </div>
   );
 }
