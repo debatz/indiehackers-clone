@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import Link from "next/link";
 import HeaderTitle from '@/atoms/HeaderTitle';
 export default function FilterNav({ props, router }) {
