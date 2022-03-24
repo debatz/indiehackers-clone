@@ -1,5 +1,7 @@
 export default function Logo() {
-    return(
-        <img src="/indiehackerslogo.svg" alt="IndieHackers logo" />
-    )
+  return (
+    <div className="w-6 bg-white">
+      <img src="/indiehackerslogo.svg" alt="IndieHackers logo" />
+    </div>
+  );
 }
