@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 
 import Head from "next/head";
-import TitleBar from "@/components/organisms/TitleBar";
+import TitleBar from "@/components/organisms/TitleBar/TitleBar";
 import Header from "@/components/organisms/Header";
 import Border from "@/components/atoms/Border";
 import TimeFilters from "@/components/molecules/PostLoop/TimeFilters";
