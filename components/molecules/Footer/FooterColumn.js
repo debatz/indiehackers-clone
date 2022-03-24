@@ -3,9 +3,9 @@ import FooterColTitle from "@/components/atoms/Footer/FooterColTitle";
 
 export default function FooterColumn({ props, title, router }) {
   return (
-    <div className="flex flex-col">
+    <div>
       <FooterColTitle>{title}</FooterColTitle>
-      <ul>
+      <ul className="flex flex-col space-y-1">
         {props.map((item, index) => {
           return (
             <li key={index}>
