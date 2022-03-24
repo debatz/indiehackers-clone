@@ -24,6 +24,84 @@ export const posts = [
     upvotes: 8,
     comments: 7,
   },
+  {
+    title:
+      "The Solo Founder Playbook",
+    author: "Sofia",
+    authorBadge:
+      "https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_YdZoKFYO86bTRp45KkUBY0pUaCB3.webp",
+    collection: true,
+    collectionName: "Listen Up! IH",
+    collectionBadge:
+      "https://storage.googleapis.com/indie-hackers.appspot.com/group-icons/lessons-learned/28x28_lessons-learned.webp",
+    upvotes: 10,
+    comments: 23,
+  },
+  {
+    title:
+      "This marketing strategy actually made me happier",
+    author: "Laura",
+    authorBadge:
+      "https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_YdZoKFYO86bTRp45KkUBY0pUaCB3.webp",
+    collection: true,
+    collectionName: "Marketing",
+    collectionBadge:
+      "https://storage.googleapis.com/indie-hackers.appspot.com/group-icons/lessons-learned/28x28_lessons-learned.webp",
+    upvotes: 10,
+    comments: 23,
+  },
+  {
+    title:
+      "My simple approach to fighting the overwhelm of solopreneur life",
+    author: "Madison",
+    authorBadge:
+      "https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_YdZoKFYO86bTRp45KkUBY0pUaCB3.webp",
+    collection: true,
+    collectionName: "Marketing",
+    collectionBadge:
+      "https://storage.googleapis.com/indie-hackers.appspot.com/group-icons/lessons-learned/28x28_lessons-learned.webp",
+    upvotes: 10,
+    comments: 23,
+  },
+  {
+    title:
+      "Do you use Docker as a maker?",
+    author: "Madison",
+    authorBadge:
+      "https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_YdZoKFYO86bTRp45KkUBY0pUaCB3.webp",
+    collection: true,
+    collectionName: "Developers",
+    collectionBadge:
+      "https://storage.googleapis.com/indie-hackers.appspot.com/group-icons/lessons-learned/28x28_lessons-learned.webp",
+    upvotes: 10,
+    comments: 23,
+  },
+  {
+    title:
+      "Build a brand before you build a product?",
+    author: "Karen",
+    authorBadge:
+      "https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_YdZoKFYO86bTRp45KkUBY0pUaCB3.webp",
+    collection: true,
+    collectionName: "Developers",
+    collectionBadge:
+      "https://storage.googleapis.com/indie-hackers.appspot.com/group-icons/lessons-learned/28x28_lessons-learned.webp",
+    upvotes: 3,
+    comments: 2,
+  },
+  {
+    title:
+      "Share a business idea here",
+    author: "Malcolm",
+    authorBadge:
+      "https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_YdZoKFYO86bTRp45KkUBY0pUaCB3.webp",
+    collection: true,
+    collectionName: "Developers",
+    collectionBadge:
+      "https://storage.googleapis.com/indie-hackers.appspot.com/group-icons/lessons-learned/28x28_lessons-learned.webp",
+    upvotes: 4,
+    comments: 12,
+  }
 ];
 
 export const jobInfo = [
@@ -47,8 +125,19 @@ export const jobInfo = [
     maxSalary: "110,000",
     currency: "$",
     type: "Full Time",
-    datePosted: "2022-03-19T23:28:56.782Z",
+    datePosted: "2022-03-22T23:28:56.782Z",
   },
+  {
+    title: "Technical Lead",
+    company: "ChatFox",
+    jobBadge:
+      "https://storage.googleapis.com/indie-hackers.appspot.com/product-avatars/chimpy/52x52_chimpy.webp?1647890542403",
+    minSalary: "120,000",
+    maxSalary: "150,000",
+    currency: "$",
+    type: "Full Time",
+    datePosted: "2022-03-24T23:28:56.782Z",
+  }
 ];
 
 export const partnerInfo = [
@@ -62,6 +151,21 @@ export const partnerInfo = [
     datePosted: "2022-03-19T23:28:56.782Z",
     icon: "CodeIcon",
   },
+  {
+    title: "Seeking Non-Tech CoFounder",
+    datePosted: "2022-03-20T23:28:56.782Z",
+    icon: "CodeIcon",
+  },
+  {
+    title: "Senior PM Looking for Full-Stack Developer",
+    datePosted: "2022-03-21T23:28:56.782Z",
+    icon: "CodeIcon",
+  },
+  {
+    title: "Seeking cofounder for food ordering kiosk idea",
+    datePosted: "2022-03-22T23:28:56.782Z",
+    icon: "CodeIcon",
+  }
 ];
 
 export const meetupInfo = [
@@ -97,12 +201,12 @@ export const footerColumns = [
     links: [
       {
         title: "Groups",
-        href: "/",
+        href: "/groups",
         icon: "",
       },
       {
         title: "Meetups",
-        href: "/",
+        href: "/meetups",
         icon: "",
       },
       {
@@ -112,17 +216,17 @@ export const footerColumns = [
       },
       {
         title: "Top This Week",
-        href: "/",
+        href: "/top-this-week",
         icon: "",
       },
       {
         title: "Top This Month",
-        href: "/",
+        href: "/top-this-month",
         icon: "",
       },
       {
         title: "Join",
-        href: "/",
+        href: "/join",
         icon: "ArrowRightIcon",
       },
     ],
@@ -132,27 +236,27 @@ export const footerColumns = [
     links: [
       {
         title: "All Products",
-        href: "/",
+        href: "/all-products",
         icon: "",
       },
       {
         title: "Highest Revenue",
-        href: "/",
+        href: "/highest-revenue",
         icon: "",
       },
       {
         title: "Side Projects",
-        href: "/",
+        href: "/side-projects",
         icon: "",
       },
       {
         title: "Self-Funded",
-        href: "/",
+        href: "/self-funded",
         icon: "",
       },
       {
         title: "Add Yours",
-        href: "/",
+        href: "/add-yours",
         icon: "ArrowRightIcon",
       },
     ],
@@ -162,23 +266,23 @@ export const footerColumns = [
     links: [
       {
         title: "Explore",
-        href: "/",
+        href: "/explore",
         icon: "",
       },
       {
-        title: "Starte Here",
-        href: "/",
+        title: "Start Here",
+        href: "/start-here",
         icon: "",
       },
       {
         title: "Podcasts",
-        href: "/",
+        href: "/podcasts",
         icon: "",
       },
 
       {
         title: "Contribute",
-        href: "/",
+        href: "/contribute",
         icon: "ArrowRightIcon",
       },
     ],
