@@ -9,13 +9,14 @@ export default function PostLoop({props}) {
         return (
           <div key={index}>
             <PostCard
+              slug={i.slug}
               title={i.title}
-              collection={i.collection}
-              collectionName={i.collectionName}
-              collectionBadge={i.collectionBadge}
+              author={i.author}
+              collectionName={i.collection_name}
+              collectionBadge={i.collection_badge}
               upvotes={i.upvotes}
               comments={i.comments}
-              authorBadge={i.authorBadge}
+              authorBadge={i.author_badge}
             />
             <Border className="my-3" />
           </div>

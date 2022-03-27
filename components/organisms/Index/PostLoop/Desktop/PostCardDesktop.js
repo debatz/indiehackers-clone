@@ -8,7 +8,6 @@ export default function PostCardDesktop({
   className,
   title,
   author,
-  collection,
   collectionName,
   collectionBadge,
   upvotes,
@@ -30,7 +29,6 @@ export default function PostCardDesktop({
         <PostTitle>{title}</PostTitle>
         <PostInfoDesktop
           author={author}
-          collection={collection}
           collectionBadge={collectionBadge}
           collectionName={collectionName}
           upvotes={upvotes}

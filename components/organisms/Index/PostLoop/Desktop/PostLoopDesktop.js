@@ -12,12 +12,11 @@ export default function PostLoopDesktop({ props }) {
             <PostCardDesktop
               title={i.title}
               author={i.author}
-              collection={i.collection}
-              collectionName={i.collectionName}
-              collectionBadge={i.collectionBadge}
+              collectionName={i.collection_name}
+              collectionBadge={i.collection_badge}
               upvotes={i.upvotes}
               comments={i.comments}
-              authorBadge={i.authorBadge}
+              authorBadge={i.author_badge}
             />
           </div>
         );
