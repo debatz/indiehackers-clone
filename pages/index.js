@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { useMatchMedia } from "utils/useMatchMedia";
+import { supabase } from "utils/supabase";
 
 import Head from "next/head";
 import TitleBar from "@/components/organisms/Index/TitleBar/TitleBar";
@@ -12,18 +13,12 @@ import PartnerUpLoop from "@/components/organisms/Index/PartnerUp/PartnerUpLoop"
 import MeetupsLoop from "@/components/organisms/Index/Meetups/MeetupsLoop";
 import Footer from "@/components/organisms/Index/Footer/Footer";
 
-import {
-  posts,
-  jobInfo,
-  partnerInfo,
-  meetupInfo,
-  footerColumns,
-} from "utils/consts";
+import { jobInfo, partnerInfo, meetupInfo, footerColumns } from "utils/consts";
 import Container from "@/components/templates/Container";
 import PostLoopDesktop from "@/components/organisms/Index/PostLoop/Desktop/PostLoopDesktop";
-export default function Home() {
+
+export default function Home({ posts }) {
   const isMobile = useMatchMedia("(max-width:640px)", true);
-  console.log(isMobile);
   const router = useRouter();
   return (
     <div>
@@ -72,4 +67,13 @@ export default function Home() {
       </Container>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const { data } = await supabase.from("posts").select();
+  return {
+    props: {
+      posts: data,
+    },
+  };
 }
