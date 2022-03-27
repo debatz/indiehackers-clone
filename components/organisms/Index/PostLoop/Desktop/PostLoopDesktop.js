@@ -8,7 +8,7 @@ export default function PostLoopDesktop({ props }) {
     <div className='mt-4'>
       {props.map((i, index) => {
         return (
-          <div key={index}>
+          <div key={index} className="my-4">
             <PostCardDesktop
               title={i.title}
               author={i.author}
@@ -19,7 +19,6 @@ export default function PostLoopDesktop({ props }) {
               comments={i.comments}
               authorBadge={i.authorBadge}
             />
-            <Border className="my-3" />
           </div>
         );
       })}
