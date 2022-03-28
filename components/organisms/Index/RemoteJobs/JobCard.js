@@ -2,9 +2,9 @@ import JobTitle from "@/components/atoms/Index/RemoteJobs/JobTitle";
 import JobInfo from "@/components/molecules/Index/RemoteJobs/JobInfo";
 import JobAge from "@/components/atoms/Index/RemoteJobs/JobAge";
 import JobBadge from "@/components/atoms/Index/RemoteJobs/JobBadge";
+import { diffDays } from 'utils/dateDifference';
 
 export default function JobCard({ props }) {
-    const diffDays = (date, otherDate) => Math.ceil(Math.abs(date - otherDate) / (1000 * 60 * 60 * 24));
     const currentDate = new Date();
     return (
         <div className="flex justify-between">

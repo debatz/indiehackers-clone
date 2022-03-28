@@ -9,10 +9,9 @@ import CommentsUpvotes from "@/components/atoms/Slug/Comments/CommentsUpvotes";
 import CommentsAuthorTitle from '@/components/atoms/Slug/Comments/CommentsAuthor';
 import CommentsReplyTitle from '@/components/atoms/Slug/Comments/CommentsReplyTitle';
 import CommentsTimeTitle from '@/components/atoms/Slug/Comments/CommentsTimeTitle';
+import { diffDays } from 'utils/dateDifference';
 
 export default function Post({ post }) {
-  const diffDays = (date, otherDate) =>
-    Math.ceil(Math.abs(date - otherDate) / (1000 * 60 * 60 * 24));
   const currentDate = new Date();
   return (
     <div className="mx-4 space-y-12">
