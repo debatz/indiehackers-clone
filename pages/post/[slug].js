@@ -26,11 +26,9 @@ export async function getStaticProps({ params }) {
     .select("*, comments(*)")
     .eq("slug", params.slug)
     .single();
-
   if (error) {
     console.log(error.message);
   }
-
   return {
     props: {
       post,
