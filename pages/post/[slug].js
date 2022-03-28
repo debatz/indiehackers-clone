@@ -6,6 +6,9 @@ import SlugComments from "@/components/organisms/Slug/SlugComments";
 import ReactMarkdown from "react-markdown";
 import CommentsAuthorBadge from "@/components/atoms/Slug/Comments/CommentsAuthorBadge";
 import CommentsUpvotes from "@/components/atoms/Slug/Comments/CommentsUpvotes";
+import CommentsAuthorTitle from '@/components/atoms/Slug/Comments/CommentsAuthor';
+import CommentsReplyTitle from '@/components/atoms/Slug/Comments/CommentsReplyTitle';
+import CommentsTimeTitle from '@/components/atoms/Slug/Comments/CommentsTimeTitle';
 
 export default function Post({ post }) {
   const diffDays = (date, otherDate) =>
@@ -42,15 +45,13 @@ export default function Post({ post }) {
                   {item.content}
                 </ReactMarkdown>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2 text-[#63809c]">
                 <CommentsAuthorBadge authorBadge={item.author_badge} />
-                <span>{item.author}</span>
+                <CommentsAuthorTitle>{item.author}</CommentsAuthorTitle>
                 <span>·</span>
-                <span>
-                  {diffDays(currentDate, new Date(item.created_at))} days ago
-                </span>
+                <CommentsTimeTitle>{diffDays(currentDate, new Date(item.created_at))} days ago</CommentsTimeTitle>
                 <span>·</span>
-                <span className="font-semibold text-white">REPLY</span>
+                <CommentsReplyTitle>REPLY</CommentsReplyTitle>
               </div>
             </li>
           );
