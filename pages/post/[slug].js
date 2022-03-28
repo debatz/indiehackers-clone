@@ -35,7 +35,7 @@ export default function Post({ post }) {
       <ul className="space-y-6">
         {post.comments.map((item, index) => {
           return (
-            <li key={index}>
+            <li className="space-y-3" key={index}>
               <div className="flex space-x-2">
                 <CommentsUpvotes props={item.upvotes} />
                 <ReactMarkdown className="prose prose-lg prose-invert">
