@@ -16,7 +16,7 @@ export default function Header() {
   return (
     <header className='flex items-center justify-between sm:p-2'>
     <FilterNav props={headerItems} router={router}></FilterNav>
-    <HeaderButton />
+    <HeaderButton>New Post</HeaderButton>
     </header>
   );
 }
