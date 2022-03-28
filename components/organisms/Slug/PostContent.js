@@ -4,7 +4,7 @@ import { dateFormatter } from "utils/dateFormatter";
 
 export default function PostContent({ props }) {
   return (
-    <div>
+    <div className='space-y-12'>
       <SlugPostHeader title={props.title} author={props.author} />
       <SlugPostContent>{props.content}</SlugPostContent>
       <div className="flex flex-wrap items-center space-x-1 text-[#d1d5db] text-xl">
