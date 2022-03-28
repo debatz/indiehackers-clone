@@ -2,17 +2,9 @@ import { supabase } from "utils/supabase";
 import SlugPostContent from "@/components/atoms/Slug/SlugPostContent";
 import SlugPostHeader from "@/components/molecules/Slug/SlugPostHeader";
 import { dateFormatter } from "utils/dateFormatter";
-import SlugComments from "@/components/organisms/Slug/SlugComments";
-import ReactMarkdown from "react-markdown";
-import CommentsAuthorBadge from "@/components/atoms/Slug/Comments/CommentsAuthorBadge";
-import CommentsUpvotes from "@/components/atoms/Slug/Comments/CommentsUpvotes";
-import CommentsAuthorTitle from '@/components/atoms/Slug/Comments/CommentsAuthor';
-import CommentsReplyTitle from '@/components/atoms/Slug/Comments/CommentsReplyTitle';
-import CommentsTimeTitle from '@/components/atoms/Slug/Comments/CommentsTimeTitle';
-import { diffDays } from 'utils/dateDifference';
+import Comments from "@/components/organisms/Slug/Comments/Comments";
 
 export default function Post({ post }) {
-  const currentDate = new Date();
   return (
     <div className="mx-4 space-y-12">
       <SlugPostHeader title={post.title} author={post.author} />
@@ -32,30 +24,7 @@ export default function Post({ post }) {
         <span>on</span>
         <span>{dateFormatter(post.created_at)}</span>
       </div>
-      <SlugComments author={post.author} />
-
-      <ul className="space-y-6">
-        {post.comments.map((item, index) => {
-          return (
-            <li className="space-y-3" key={index}>
-              <div className="flex space-x-2">
-                <CommentsUpvotes props={item.upvotes} />
-                <ReactMarkdown className="prose prose-lg prose-invert">
-                  {item.content}
-                </ReactMarkdown>
-              </div>
-              <div className="flex items-center space-x-2 text-[#63809c]">
-                <CommentsAuthorBadge authorBadge={item.author_badge} />
-                <CommentsAuthorTitle>{item.author}</CommentsAuthorTitle>
-                <span>·</span>
-                <CommentsTimeTitle>{diffDays(currentDate, new Date(item.created_at))} days ago</CommentsTimeTitle>
-                <span>·</span>
-                <CommentsReplyTitle>REPLY</CommentsReplyTitle>
-              </div>
-            </li>
-          );
-        })}
-      </ul>
+      <Comments props={post} />
     </div>
   );
 }
