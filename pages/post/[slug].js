@@ -6,7 +6,7 @@ export default function Post({ post }) {
   return (
     <div className="mx-4 space-y-12">
       <PostContent props={post} />
-      <Comments props={post} />
+      {post?.comments && <Comments props={post} />}
     </div>
   );
 }
