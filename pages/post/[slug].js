@@ -6,6 +6,7 @@ export default function Post({ post }) {
   return (
     <div className="mx-4 space-y-12">
       <PostContent props={post} />
+      {/* TODO: CRUDE FIX FOR NOT AVAILABLE PROPS IN SSG, IMPROVE!!!  */}
       {post?.comments && <Comments props={post} />}
     </div>
   );
