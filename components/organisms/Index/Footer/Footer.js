@@ -6,7 +6,7 @@ import FooterLegal from "@/components/molecules/Index/Footer/FooterLegal";
 
 export default function Footer({ props, router }) {
   return (
-    <div className="md:mx-48">
+    <div className="xl:mx-48">
       <FooterCTA />
       <div className="md:flex md:flex-row-reverse md:items-center">
         <div className="grid grid-cols-3 gap-4 py-12 md:w-1/2">
