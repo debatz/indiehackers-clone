@@ -1,6 +1,6 @@
 export default function FooterLegal() {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center md:items-start">
       <div className="text-[#63809c] flex space-x-1">
         <span>© Stripe</span>
         <span>·</span>

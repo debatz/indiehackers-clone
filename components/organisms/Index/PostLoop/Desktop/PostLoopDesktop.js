@@ -1,12 +1,10 @@
 import PostCardDesktop from "./PostCardDesktop";
-import Border from "@/components/atoms/Border";
-import PaginationTitle from "@/components/atoms/Index/PostLoop/PaginationTitle";
 import PagTitleDesktop from "@/components/atoms/Index/PostLoop/PagTitleDesktop";
 
 export default function PostLoopDesktop({ props }) {
   return (
     <div className='mt-4'>
-      {props.map((i, index) => {
+      {props?.map((i, index) => {
         return (
           <div key={index} className="my-4">
             <PostCardDesktop

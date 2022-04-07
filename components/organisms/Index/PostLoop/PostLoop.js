@@ -5,7 +5,7 @@ import PaginationTitle from "@/components/atoms/Index/PostLoop/PaginationTitle";
 export default function PostLoop({props}) {
   return (
     <div>
-      {props.map((i, index) => {
+      {props?.map((i, index) => {
         return (
           <div key={index}>
             <PostCard

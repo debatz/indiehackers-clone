@@ -18,7 +18,7 @@ import Container from "@/components/templates/Container";
 import PostLoopDesktop from "@/components/organisms/Index/PostLoop/Desktop/PostLoopDesktop";
 
 export default function Home({ posts }) {
-  const isMobile = useMatchMedia("(max-width:640px)", true);
+  const isMobile = useMatchMedia("(max-width:1280px)", true);
   const router = useRouter();
   return (
     <div>
@@ -30,37 +30,67 @@ export default function Home({ posts }) {
 
       <main>
         <TitleBar />
-        <section className="mx-4 mt-10">
-          <div className="sm:border-[3px] sm:border-[#1f364d] sm:mt-7 sm:rounded-sm sm:mx-3">
-            <div className="sm:border-b-[3px] sm:border-[#1f364d]">
-              <Header />
-              <Border className="hidden sm:block sm:border-b-[3px]" />
-              <Border className="my-3 sm:hidden" />
-              <TimeFilters className="p-2" />
+        <Container>
+          {isMobile ? (
+            <div>
+              {/* Mobile Layout */}
+              <section className="mx-4 mt-10">
+                <div className="sm:border-[3px] sm:border-[#1f364d] sm:mt-7 sm:rounded-sm sm:mx-3">
+                  <div className="sm:border-b-[3px] sm:border-[#1f364d]">
+                    <Header />
+                    <Border className="hidden sm:block sm:border-b-[3px]" />
+                    <Border className="my-3 sm:hidden" />
+                    <TimeFilters className="p-2" />
+                  </div>
+                  <Border className="my-3 sm:hidden" />
+                  <PostLoop props={posts} />
+                </div>
+              </section>
+
+              <section className="mx-4 mt-10">
+                <JobLoop props={jobInfo} />
+              </section>
+
+              <section className="mx-4 mt-10">
+                <PartnerUpLoop props={partnerInfo} />
+              </section>
+
+              <section className="mx-4 mt-10">
+                <MeetupsLoop props={meetupInfo} />
+              </section>
             </div>
-            <Border className="my-3 sm:hidden" />
-            {isMobile ? (
-              <PostLoop props={posts} />
-            ) : (
-              <PostLoopDesktop props={posts} />
-            )}
-          </div>
-        </section>
-
-        <section className="mx-4 mt-10">
-          <JobLoop props={jobInfo} />
-        </section>
-
-        <section className="mx-4 mt-10">
-          <PartnerUpLoop props={partnerInfo} />
-        </section>
-
-        <section className="mx-4 mt-10">
-          <MeetupsLoop props={meetupInfo} />
-        </section>
+          ) : (
+            <div className="grid grid-cols-4">
+              {/* Desktop Layout */}
+              <section className="mx-4 mt-10">
+                <MeetupsLoop props={meetupInfo} />
+              </section>
+              <section className="col-span-2 mx-4 mt-10">
+                <div className="sm:border-[3px] sm:border-[#1f364d] sm:mt-7 sm:rounded-sm sm:mx-3">
+                  <div className="sm:border-b-[3px] sm:border-[#1f364d]">
+                    <Header />
+                    <Border className="hidden sm:block sm:border-b-[3px]" />
+                    <Border className="my-3 sm:hidden" />
+                    <TimeFilters className="p-2" />
+                  </div>
+                  <Border className="my-3 sm:hidden" />
+                  <PostLoopDesktop props={posts} />
+                </div>
+              </section>
+              <div>
+                <section className="mx-4 mt-10">
+                  <JobLoop props={jobInfo} />
+                </section>
+                <section className="mx-4 mt-10">
+                  <PartnerUpLoop props={partnerInfo} />
+                </section>
+              </div>
+            </div>
+          )}
+        </Container>
       </main>
-
-      <Container className="my-12">
+      <div className="my-12 md:border-t-[3px] sm:border-[#1f364d]" />
+      <Container>
         <footer>
           <Footer props={footerColumns} router={router}></Footer>
         </footer>
